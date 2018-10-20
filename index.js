@@ -15,7 +15,7 @@ function showRepositories() {
 }
 function getRepositories() {
   const req = new XMLHttpRequest();
-  req.open('GET', 'https://api.github.com/users/kirbycampbell/repos');
+  req.open('GET', 'https://api.github.com/users/octocat/repos');
   req.send();
 }
 
@@ -23,7 +23,7 @@ function getCommits(el) {
   const name = el.dataset.repo;
   const req = new XMLHttpRequest();
   req.addEventListener('load', showCommits);
-  req.open('GET', 'https://api.github.com/repos/kirbycampbell/' + name + '/commits');
+  req.open('GET', 'https://api.github.com/repos/octocat/' + name + '/commits');
   req.send();
 }
 
